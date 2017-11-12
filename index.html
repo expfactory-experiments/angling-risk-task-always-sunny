@@ -58,10 +58,10 @@ $( document ).ready(function() {
 
                              if (err.status == 200){
                                  document.location = "/next";
+                             } else {
+                                 // If error, assue local save
+                                 jsPsych.data.localSave('angling-risk-task-always-sunny_results.csv', 'csv');
                              }
-
-                             // If error, assue local save
-                             jsPsych.data.localSave('angling-risk-task-always-sunny_results.csv', 'csv');
                          }
                      });
                  })
